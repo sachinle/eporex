@@ -12,6 +12,8 @@
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <meta name="google-site-verification" content="wrgyzyTWPon2WwUh5kVovh_b-kh7qzWLEQNJsBTDDyI" />
 
         <meta name="author" content="Eporex">
@@ -106,7 +108,7 @@
 
         <!--<< EPOREX Premium Light Theme Redesign (loaded last) >>-->
 
-        <link rel="stylesheet" href="assets/css/eporex-redesign.css">
+        <link rel="stylesheet" href="assets/css/eporex-redesign.css?v=4">
 
 
 

@@ -2,15 +2,10 @@
 
     <body>
 
-       
-
        <?php include 'header.php'?>
 
         <!--<< Breadcrumb Section Start >>-->
         <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/w2.jpg');">
-            <!--<div class="mask-shape">
-                <img src="assets/img/mask-shape.png" alt="shape-img">
-            </div>-->
             <div class="container">
                 <div class="page-heading">
                     <h1>About Us</h1>
@@ -31,59 +26,54 @@
             </div>
         </div>
 
-        <!-- About Section Start -->
+        <!-- Company Story Start -->
         <section class="about-section fix section-padding">
             <div class="container">
-                <div class="about-wrapper-2">
-                    <div class="row align-items-center">
-                        <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                            <div class="about-image style-2">
-                                <img src="assets/img/w6.jpg" alt="about-img">
-                                <h4 class="title-text">
-                                    10 Years Experience
-                                </h4>
+                <div class="row align-items-center g-5">
+                    <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="epx-about-collage">
+                            <div class="collage-main">
+                                <img src="assets/img/i1.jpg" alt="EPOREX industrial coating application">
+                            </div>
+                            <div class="collage-sub">
+                                <img src="assets/img/r2.jpg" alt="EPOREX resin art finish">
+                            </div>
+                            <div class="collage-badge">
+                                <strong>10+</strong>
+                                <small>Years Experience</small>
                             </div>
                         </div>
-                        <div class="col-xl-6 col-lg-6 mt-5 mt-lg-0">
-                            <div class="about-content">
-                                <span class="wow fadeInUp">ABOUT US</span>
-                                <!--<div class="section-title">
-                                    <span class="wow fadeInUp">ABOUT US</span>
-                                    <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                                        Epoxy Crystal Clear <br> Resins and Hardeners
-                                    </h2>
-                                </div>
-                                <p class="mt-4 mt-md-0 wow fadeInUp" data-wow-delay=".5s">Epoxy resins and hardeners are commonly used in various applications such as art, jewelry making, woodworking, and more. These resins are formulated to cure transparently, providing a clear and glossy finish.</p>
-                                <ul class="wow fadeInUp" data-wow-delay=".7s">
-                                    <li>
-                                        <i class="fa-solid fa-circle-check"></i>
-                                        The primary characteristic of crystal clear epoxy resins is their ability to cure transparently, providing a clear and glass-like finish.
-                                    </li>
-                                    <li>
-                                        <i class="fa-solid fa-circle-check"></i>
-                                        High-quality formulations are designed to minimize yellowing or cloudiness over time, resulting in a long-lasting, crystal-clear appearance.
-                                    </li>
-                                    <li>
-                                        <i class="fa-solid fa-circle-check"></i>
-                                        These resins are commonly used for coating surfaces, encapsulating objects, creating jewelry, or casting decorative items.
-                                    </li>
-                                </ul>-->
-                                
-                                <?php include 'prod_slide.php'?>
-                                
-                                <div class="about-info-items wow fadeInUp" data-wow-delay=".9s">
-                                    <a href="about.php" class="theme-btn-2">
-                                        Know More About us<!--<span class="shape-img">
-                                        <img src="assets/img/arrow-shape.png" alt="shape-img">
-                                    </span>--></a>
-                                    <div class="call-area">
-                                        <span>or Call us</span>
-                                        <div class="icon">
-                                            <i class="fa-solid fa-phone-volume"></i>
-                                            <h6>
-                                                <a href="tel:+917358010419">+91 73580 10419</a>
-                                            </h6>
-                                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="about-content">
+                            <span class="wow fadeInUp">ABOUT US</span>
+                            <div class="section-title">
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s">Performance Chemical Manufacturer from Namakkal, Tamil Nadu</h2>
+                            </div>
+                            <p class="mt-4 wow fadeInUp" data-wow-delay=".3s">
+                                EPOREX INDUSTRIES PRIVATE LIMITED is involved in manufacturing and supply of performance chemicals which serves various industries including paints &amp; coatings, cosmetic, agro and others.
+                            </p>
+                            <p class="mt-3 wow fadeInUp" data-wow-delay=".35s">
+                                We are involved in export and import activities through our strong distributors and suppliers network through global with consistent quality and prominent supply.
+                            </p>
+                            <p class="mt-3 wow fadeInUp" data-wow-delay=".4s">
+                                From our facility on Salem Road, Namakkal, we formulate and supply four dedicated product lines &mdash; waterproofing &amp; grouting systems, industrial coatings, artist-grade resin systems and industrial chemicals &mdash; serving contractors, industries, dealers and creators across India.
+                            </p>
+                            <ul class="epx-feature-list wow fadeInUp" data-wow-delay=".45s">
+                                <li><i class="fa-solid fa-circle-check"></i> In-house manufacturing with consistent batch quality</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Four dedicated product categories under one brand</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Global sourcing and distribution partner network</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Guidance from product selection to application</li>
+                            </ul>
+                            <div class="about-info-items wow fadeInUp" data-wow-delay=".5s">
+                                <a href="#" class="theme-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquire Now</a>
+                                <div class="call-area">
+                                    <span>or Call us</span>
+                                    <div class="icon">
+                                        <i class="fa-solid fa-phone-volume"></i>
+                                        <h6>
+                                            <a href="tel:+917358010419">+91 73580 10419</a>
+                                        </h6>
                                     </div>
                                 </div>
                             </div>
@@ -92,13 +82,111 @@
                 </div>
             </div>
         </section>
+
+        <!-- What We Do Start -->
+        <section class="service-section-2 epx-cat-grid fix section-padding pt-0">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="wow fadeInUp">WHAT WE DO</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Four Product Lines, One Standard of Quality</h2>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="service-items-2">
+                            <div class="service-image">
+                                <img src="assets/img/w9.jpg" alt="Waterproofing application" loading="lazy">
+                            </div>
+                            <div class="service-content">
+                                <h3><a href="water_proof.php">Waterproofing &amp; Grouting</a></h3>
+                                <p>Sealants, injection grouts and crack fillers that stop leaks at the source.</p>
+                                <a href="water_proof.php" class="theme-btn-2 padding-style mt-4">View Products</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="service-items-2">
+                            <div class="service-image">
+                                <img src="assets/img/i5.jpg" alt="Industrial coating application" loading="lazy">
+                            </div>
+                            <div class="service-content">
+                                <h3><a href="coating.php">Industrial Coating</a></h3>
+                                <p>Primers and protective top coats for steel, concrete and flooring.</p>
+                                <a href="coating.php" class="theme-btn-2 padding-style mt-4">View Products</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="service-items-2">
+                            <div class="service-image">
+                                <img src="assets/img/r2.jpg" alt="Resin art surface" loading="lazy">
+                            </div>
+                            <div class="service-content">
+                                <h3><a href="resin.php">Resin Art</a></h3>
+                                <p>Crystal clear coating and casting resins, pigments and metallic powders.</p>
+                                <a href="resin.php" class="theme-btn-2 padding-style mt-4">View Products</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="service-items-2">
+                            <div class="service-image">
+                                <img src="assets/img/i1.jpg" alt="Industrial chemical processing" loading="lazy">
+                            </div>
+                            <div class="service-content">
+                                <h3><a href="industrialchemical.php">Industrial Chemicals</a></h3>
+                                <p>Epoxy hardeners and performance chemicals supplied in bulk.</p>
+                                <a href="industrialchemical.php" class="theme-btn-2 padding-style mt-4">View Products</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Start -->
+        <section class="fix section-padding section-bg">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="wow fadeInUp">WHY CHOOSE EPOREX</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Built on Consistency, Backed by Support</h2>
+                </div>
+                <div class="row g-4 mt-3">
+                    <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="epx-value-card">
+                            <div class="value-icon"><i class="fa-solid fa-flask-vial"></i></div>
+                            <h5>Consistent Quality</h5>
+                            <p>Every batch is produced to the same formulation standard, so applicators get predictable results project after project.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="epx-value-card">
+                            <div class="value-icon"><i class="fa-solid fa-industry"></i></div>
+                            <h5>Manufacturer Direct</h5>
+                            <p>Products come straight from our own manufacturing, giving dealers and bulk buyers dependable pricing and availability.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="epx-value-card">
+                            <div class="value-icon"><i class="fa-solid fa-globe"></i></div>
+                            <h5>Global Network</h5>
+                            <p>Export and import operations run through a strong network of distributors and suppliers with prominent, on-time supply.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="epx-value-card">
+                            <div class="value-icon"><i class="fa-solid fa-headset"></i></div>
+                            <h5>Application Support</h5>
+                            <p>From choosing the right system to applying it correctly, our team supports customers at every step of the job.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Counter Section Start -->
-        <section class="Counter-section fix section-padding pt-0">
+        <section class="Counter-section fix section-padding">
             <div class="container">
                 <div class="counter-wrapper">
-                    <div class="industril-image text-center wow fadeInUp" data-wow-delay=".3s">
-                        <img src="assets/img/1.png" alt="img">
-                    </div>
                      <div class="counter-main-items bg-cover" style="">
                         <div class="counter-items wow fadeInUp" data-wow-delay=".3s">
                             <h2><span class="count">20</span>+</h2>
@@ -121,51 +209,15 @@
             </div>
         </section>
 
-        <!-- Video Section Start --
-        <div class="video-section bg-cover" style="background-image: url('assets/img/video-bg.jpg');">
+        <!-- CTA Band Start -->
+        <section class="fix section-padding pt-0">
             <div class="container">
-                <div class="video-wrapper-box text-center">
-                    <a href="https://www.youtube.com/watch?v=Y7zIZVlMtFY" class="video-btn video-popup">
-                        <img src="assets/img/circle-2.png" alt="img" class="text-circle">
-                        <span>Play Reel</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- About Section Start --
-        <section class="about-section fix section-padding">
-            <div class="container">
-                <div class="about-wrapper-2 style-2">
-                    <div class="row align-items-center">
-                        <div class="col-xl-6 col-lg-6">
-                            <div class="about-content">
-                                <div class="section-title">
-                                    <span class="wow fadeInUp">FOCUSED AND FUTURE READY</span>
-                                    <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                                        Perfect Company to Deliver Best Construction Solutions
-                                    </h2>
-                                </div>
-                                <p class="mt-4 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
-                                    We have facility to produce advance work various industrial applications based on specially developed technol-ogy. We are also ready to developement by according to users changing needs. Infrastructure related installation projects.
-                                </p>
-                                <ul class="wow fadeInUp" data-wow-delay=".7s">
-                                    <li>Geographical diversity, project complexity</li>
-                                    <li>Whether building on land or over water</li>
-                                    <li>Construction companies respond to the unique needs</li>
-                                </ul>
-                                <a href="about.html" class="theme-btn-2 mt-5 wow fadeInUp" data-wow-delay=".9s">
-                                know More About us<span class="shape-img">
-                                <img src="assets/img/arrow-shape.png" alt="shape-img">
-                                </span></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 mt-5 mt-lg-0 wow fadeInUp" data-wow-delay=".3s">
-                            <div class="about-image">
-                                <img src="assets/img/about/about-2.jpg" alt="about-img">
-                            </div>
-                        </div>
+                <div class="epx-about-cta wow fadeInUp">
+                    <div>
+                        <h3>Have a project or bulk requirement?</h3>
+                        <p>Tell us what you are building &mdash; we will recommend the right system and quote for it.</p>
                     </div>
+                    <a href="#" class="theme-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquire Now</a>
                 </div>
             </div>
         </section>
@@ -188,12 +240,8 @@
                                     <p class="text">
                                         Best glossy resin and its completely bubble free, have been using for 2 years and didnt face any issue, and most importantly its very affordable and reasonable
                                     </p>
-                                   
                                 </div>
                                 <div class="client-info">
-                                    <!--<div class="client-image">
-                                        <img src="assets/img/testimonial/07.jpg" alt="client-img">
-                                    </div>-->
                                     <div class="client-content">
                                         <h5>Kanmani Kanmani</h5>
                                         <p>Resin Artist</p>
@@ -214,12 +262,8 @@ I loved it .
 It gives good glossy look
 I'm using it for more than 6 months.very nice
                                     </p>
-                                   
                                 </div>
                                 <div class="client-info">
-                                    <!--<div class="client-image">
-                                        <img src="assets/img/testimonial/07.jpg" alt="client-img">
-                                    </div>-->
                                     <div class="client-content">
                                         <h5>SANGEETHA M</h5>
                                         <p>Resin Artist</p>
@@ -234,14 +278,10 @@ I'm using it for more than 6 months.very nice
                                         <i class="fa-solid fa-quote-right"></i>
                                     </div>
                                     <p class="text">
-                                        The only resin I’ll ever use. Prompt service, quick delivery, and amazing quality resin! highly recommend.
+                                        The only resin I&rsquo;ll ever use. Prompt service, quick delivery, and amazing quality resin! highly recommend.
                                     </p>
-                                   
                                 </div>
                                 <div class="client-info">
-                                    <!--<div class="client-image">
-                                        <img src="assets/img/testimonial/07.jpg" alt="client-img">
-                                    </div>-->
                                     <div class="client-content">
                                         <h5>Ananya Mullapudi</h5>
                                         <p>Resin Artist</p>

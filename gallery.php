@@ -109,9 +109,36 @@
                     </div>
 				
                 </div>
+
+                <?php
+                /* Product gallery — every pack shot in assets/img/eporex-products
+                   appears here automatically with a lightbox. */
+                $__gdir   = 'assets/img/eporex-products';
+                $__gfiles = glob($__gdir . '/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG}', GLOB_BRACE);
+                sort($__gfiles);
+                if (!empty($__gfiles)):
+                ?>
+                <div class="epx-gallery-heading">
+                    <h2>Our Products</h2>
+                </div>
+                <div class="row g-4">
+                    <?php foreach ($__gfiles as $__gf):
+                        $__gname = ucwords(str_replace('-', ' ', preg_replace('/^eporex-|-[12]$/', '', pathinfo($__gf, PATHINFO_FILENAME))));
+                    ?>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <div class="gallery-image-2 epx-shot">
+                            <img class="img-fluid" src="<?php echo htmlspecialchars($__gf); ?>" alt="EPOREX <?php echo htmlspecialchars($__gname); ?>" loading="lazy">
+                            <a href="<?php echo htmlspecialchars($__gf); ?>" class="icon img-popup">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+                <?php endif; ?>
             </div>
         </div>
-       
+
         <?php include 'footer.php'?>
 
         <?php include 'mainbot.php'?>

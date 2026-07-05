@@ -103,5 +103,5 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
         <!--<< EPOREX Premium Light Theme Redesign (loaded last) >>-->
-        <link rel="stylesheet" href="assets/css/eporex-redesign.css">
+        <link rel="stylesheet" href="assets/css/eporex-redesign.css?v=4">
     </head>

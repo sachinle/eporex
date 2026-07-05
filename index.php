@@ -456,6 +456,79 @@
 
 
 
+        <?php
+        /* ==================================================================
+           CUSTOM HERO BANNER — IMAGE SLOTS
+           ------------------------------------------------------------------
+           Drop your banner images into the array below (one path per line).
+           They will crossfade softly BEHIND the banner text. Examples:
+
+           $eporex_banner_images = array(
+               'assets/img/slider/s1.jpg',
+               'assets/img/my-new-banner.jpg',
+           );
+
+           Leave the array empty to keep the clean brand-gradient look.
+           ================================================================== */
+        $eporex_banner_images = array(
+            // 'assets/img/your-banner-1.jpg',
+            // 'assets/img/your-banner-2.jpg',
+        );
+        ?>
+        <!-- Custom Banner Start -->
+        <section class="epx-banner<?php echo !empty($eporex_banner_images) ? ' has-images' : ''; ?>">
+            <?php if (!empty($eporex_banner_images)): ?>
+            <div class="epx-banner__slides">
+                <?php foreach ($eporex_banner_images as $i => $img): ?>
+                <div class="epx-banner__slide<?php echo $i === 0 ? ' is-active' : ''; ?>" style="background-image: url('<?php echo htmlspecialchars($img); ?>');"></div>
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+            <div class="epx-banner__blob epx-banner__blob--1"></div>
+            <div class="epx-banner__blob epx-banner__blob--2"></div>
+            <div class="epx-banner__grid"></div>
+            <div class="container">
+                <div class="epx-banner__content">
+                    <span class="epx-banner__kicker wow fadeInUp">Eporex Industries Private Limited</span>
+                    <h1 class="epx-banner__title wow fadeInUp" data-wow-delay=".15s">
+                        Performance Chemicals,<br>
+                        <span class="epx-grad">Engineered to Protect.</span>
+                    </h1>
+                    <div class="epx-banner__rotator wow fadeInUp" data-wow-delay=".25s" data-epx-rotate
+                         data-words="Waterproofing &amp; Grouting|Industrial Coatings|Resin Art|Industrial Chemicals">
+                        <span class="epx-word"></span><span class="epx-caret"></span>
+                    </div>
+                    <p class="epx-banner__lead wow fadeInUp" data-wow-delay=".35s">
+                        EPOREX INDUSTRIES PRIVATE LIMITED is involved in manufacturing and supply of performance
+                        chemicals which serves various industries including paints &amp; coatings, cosmetic, agro and others.
+                    </p>
+                    <div class="epx-banner__actions wow fadeInUp" data-wow-delay=".45s">
+                        <a href="#" class="theme-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Enquire Now
+                        </a>
+                        <a href="#products" class="theme-btn-2">
+                            Explore Our Products <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+                    <div class="epx-banner__trust wow fadeInUp" data-wow-delay=".55s">
+                        <div class="epx-trust-chip">
+                            <i class="fa-solid fa-medal"></i>
+                            <span><strong>10+</strong><small>Years Experience</small></span>
+                        </div>
+                        <div class="epx-trust-chip">
+                            <i class="fa-solid fa-users"></i>
+                            <span><strong>500+</strong><small>Happy Clients</small></span>
+                        </div>
+                        <div class="epx-trust-chip">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>250+</strong><small>Projects Completed</small></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Custom Banner End -->
+
         <!-- Counter / Stats Strip (moved up: floats below the hero) -->
         <section class="Counter-section fix section-padding">
             <div class="container">
@@ -565,7 +638,7 @@
         </section>
 
         <!-- Service Section Start -->
-        <section class="service-section-2 home-services fix section-padding">
+        <section class="service-section-2 epx-cat-grid fix section-padding">
             <div class="container">
 				<div class="section-title text-center">
                    <h2 class="wow fadeInUp" data-wow-delay=".3s">OUR SERVICES</h2>
@@ -574,7 +647,7 @@
                     <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="service-items-2">
                             <div class="service-image">
-                                <img src="assets/img/ourservice/waterproofing.jpg" alt="service-img">
+                                <img src="assets/img/eporex-products/eporex-ultra-flex-2k.jpeg" alt="EPOREX Ultra Flex 2K — Waterproofing" loading="lazy">
                             </div>
                             <div class="service-content">
                                 <h3>
@@ -593,7 +666,7 @@
                     <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                         <div class="service-items-2">
                             <div class="service-image">
-                                <img src="assets/img/ourservice/industrial.jpg" alt="service-img">
+                                <img src="assets/img/eporex-products/eporex-epoxy-primer.jpeg" alt="EPOREX Epoxy Primer — Industrial Coating" loading="lazy">
                             </div>
                             <div class="service-content">
                                 <h3>
@@ -612,7 +685,7 @@
                     <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
                         <div class="service-items-2">
                             <div class="service-image">
-                                <img src="assets/img/ourservice/resin.jpg" alt="service-img">
+                                <img src="assets/img/eporex-products/eporex-crystal-clear-resin-and-hardner.jpeg" alt="EPOREX Crystal Clear Resin — Resin Art" loading="lazy">
                             </div>
                             <div class="service-content">
                                 <h3>
@@ -631,7 +704,7 @@
 					  <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
                         <div class="service-items-2">
                             <div class="service-image">
-                                <img src="assets/img/ourservice/chemical.jpg" alt="service-img">
+                                <img src="assets/img/eporex-products/eporex-epoxy-injection-resin-ej200.jpeg" alt="EPOREX EJ 200 — Industrial Chemicals" loading="lazy">
                             </div>
                             <div class="service-content">
                                 <h3>
@@ -714,7 +787,56 @@
             </div>
         </section>
 
-        <?php $showcase_limit = 8; include 'products_showcase.php'?>
+        <?php include 'products_showcase.php'?>
+
+        <!-- Testimonials Marquee Start -->
+        <section class="epx-testimonials fix section-padding">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="wow fadeInUp">TESTIMONIALS</span>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">What Clients Say About Us</h2>
+                </div>
+            </div>
+            <div class="epx-marquee" aria-label="Client testimonials">
+                <div class="epx-quote-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                    <div class="quote-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>The only resin I&rsquo;ll ever use. Prompt service, quick delivery, and amazing quality resin! highly recommend.</p>
+                    <div class="quote-client">
+                        <div class="quote-avatar" aria-hidden="true">A</div>
+                        <div>
+                            <h6>Ananya Mullapudi</h6>
+                            <span>Resin Artist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="epx-quote-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                    <div class="quote-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>Nice product and bubble free. No strong chemical smell. I loved it. It gives good glossy look. I'm using it for more than 6 months. Very nice.</p>
+                    <div class="quote-client">
+                        <div class="quote-avatar" aria-hidden="true">S</div>
+                        <div>
+                            <h6>Sangeetha M</h6>
+                            <span>Resin Artist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="epx-quote-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                    <div class="quote-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>Best glossy resin and its completely bubble free, have been using for 2 years and didnt face any issue, and most importantly its very affordable and reasonable.</p>
+                    <div class="quote-client">
+                        <div class="quote-avatar" aria-hidden="true">K</div>
+                        <div>
+                            <h6>Kanmani Kanmani</h6>
+                            <span>Resin Artist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Marquee End -->
 
         <!-- Project Section Start --
         <section class="project-section fix section-padding pb-0 mt-30">
