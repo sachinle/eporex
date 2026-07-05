@@ -435,6 +435,11 @@ td, th {
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
+            <div class="epx-sent-overlay" id="epxSentOverlay">
+                <div class="check"><i class="fa-solid fa-check"></i></div>
+                <h5>Enquiry Sent!</h5>
+                <p>Thank you &mdash; our team will get back to you shortly.</p>
+            </div>
             <div class="modal-header">
                 <!-- <h5 class="modal-title" id="exampleModalLabel">Booking From</h5> -->
                 <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
@@ -445,10 +450,14 @@ td, th {
             <div class="modal-body padding">
                 <div class="form-wrap" style="padding: 0px 25px;">
                     <h2 class="modal-title text-center">Eporex Enquiries</h2>
-                    <form class="row" action="#" method="post">
-                        <div class="col-lg-12 col-md-12 form-group">
+                    <form class="row" action="send-enquiry.php" method="post" id="epxEnquiryForm" novalidate>
+                        <div class="col-lg-6 col-md-12 form-group">
                             <label for="validationDefault01" class="form-label">Enter Full Name<span style="font-size: 20px;"> *</span></label>
                             <input type="text" class="form-control" id="validationDefault01" required>
+                        </div>
+                        <div class="col-lg-6 col-md-12 form-group">
+                            <label for="epxEmail" class="form-label">E-mail Address</label>
+                            <input type="email" class="form-control" id="epxEmail" placeholder="optional">
                         </div>
                         <!--<div class="col-lg-6 col-md-12 form-group">
                             <label for="validationDefault02" class="form-label">Check in<span style="font-size: 20px;"> *</span></label>
@@ -497,10 +506,16 @@ td, th {
                             </div>
                         </div>
 
+                        <!-- Honeypot: humans never see or fill this field -->
+                        <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+                            <input type="text" name="website" id="epxHp" tabindex="-1" autocomplete="off">
+                        </div>
+
                         <div class="col-lg-12 col-md-12 form-group">
+                            <div class="epx-form-status" id="epxFormStatus" role="status"></div>
                             <div class="enquiry-actions">
+                                <button class="btn btn-mail" type="submit" id="epxSendBtn"><span class="epx-btn-spinner"></span><i class="fas fa-paper-plane"></i> Send Enquiry</button>
                                 <button class="btn btn-whatsapp" type="button" onclick="gotowhatsapp()"><i class="fab fa-whatsapp"></i> Contact via WhatsApp</button>
-                                <button class="btn btn-mail" type="button" onclick="mailUs()"><i class="fas fa-envelope"></i> Mail Us</button>
                             </div>
                         </div>
                     </form>

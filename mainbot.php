@@ -26,7 +26,7 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 
 		<!--<< EPOREX modern interaction layer >>-->
-		<script src="assets/js/eporex-modern.js?v=4" defer></script>
+		<script src="assets/js/eporex-modern.js?v=5" defer></script>
 
 		<!--<< EPOREX subtle scroll-reveal (progressive enhancement) >>-->
 		<script>

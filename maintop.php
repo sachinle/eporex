@@ -108,7 +108,7 @@
 
         <!--<< EPOREX Premium Light Theme Redesign (loaded last) >>-->
 
-        <link rel="stylesheet" href="assets/css/eporex-redesign.css?v=4">
+        <link rel="stylesheet" href="assets/css/eporex-redesign.css?v=5">
 
 
 

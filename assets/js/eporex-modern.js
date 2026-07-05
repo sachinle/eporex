@@ -230,4 +230,130 @@
       img.setAttribute('loading', 'lazy');
     }
   });
+
+  /* ------------------------------------------------------------------
+     12. Enquiry form → send-enquiry.php (SMTP pipeline)
+     ------------------------------------------------------------------ */
+  var enquiryForm = document.getElementById('epxEnquiryForm');
+  if (enquiryForm) {
+    var statusBox = document.getElementById('epxFormStatus');
+    var sendBtn = document.getElementById('epxSendBtn');
+    var overlay = document.getElementById('epxSentOverlay');
+    var modalEl = document.getElementById('exampleModal');
+
+    var setStatus = function (msg, ok) {
+      statusBox.textContent = msg;
+      statusBox.className = 'epx-form-status ' + (ok ? 'is-ok' : 'is-err');
+    };
+    var clearStatus = function () {
+      statusBox.textContent = '';
+      statusBox.className = 'epx-form-status';
+    };
+    var fieldVal = function (id) {
+      var el = document.getElementById(id);
+      return el ? el.value.trim() : '';
+    };
+
+    /* Toast — used for server-side results */
+    var toast = function (msg, ok) {
+      var t = document.createElement('div');
+      t.className = 'epx-toast ' + (ok ? 'is-ok' : 'is-err');
+      t.innerHTML = '<i class="fa-solid ' + (ok ? 'fa-circle-check' : 'fa-circle-exclamation') + '"></i><span></span>';
+      t.querySelector('span').textContent = msg;
+      document.body.appendChild(t);
+      requestAnimationFrame(function () { t.classList.add('is-in'); });
+      setTimeout(function () {
+        t.classList.remove('is-in');
+        setTimeout(function () { t.remove(); }, 400);
+      }, 4500);
+    };
+
+    /* Inline per-field validation */
+    var markInvalid = function (id, msg) {
+      var el = document.getElementById(id);
+      if (!el) { return; }
+      el.classList.add('epx-invalid');
+      if (!el.parentNode.querySelector('.epx-field-err')) {
+        var err = document.createElement('small');
+        err.className = 'epx-field-err';
+        err.textContent = msg;
+        el.parentNode.appendChild(err);
+      } else {
+        el.parentNode.querySelector('.epx-field-err').textContent = msg;
+      }
+    };
+    var clearInvalid = function (el) {
+      el.classList.remove('epx-invalid');
+      var err = el.parentNode.querySelector('.epx-field-err');
+      if (err) { err.remove(); }
+    };
+    ['validationDefault01', 'validationDefault04', 'epxEmail', 'textArea'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) { el.addEventListener('input', function () { clearInvalid(el); }); }
+    });
+
+    enquiryForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      clearStatus();
+
+      var name = fieldVal('validationDefault01');
+      var mobile = fieldVal('validationDefault04');
+      var email = fieldVal('epxEmail');
+      var message = fieldVal('textArea');
+
+      var valid = true;
+      if (!name) { markInvalid('validationDefault01', 'Please enter your name.'); valid = false; }
+      if (!mobile) { markInvalid('validationDefault04', 'Please enter your mobile number.'); valid = false; }
+      else if (!/^[0-9+\-\s]{10,15}$/.test(mobile)) { markInvalid('validationDefault04', 'Enter a valid 10-digit mobile number.'); valid = false; }
+      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { markInvalid('epxEmail', 'This e-mail address looks incorrect.'); valid = false; }
+      if (!message) { markInvalid('textArea', 'Please write a short message.'); valid = false; }
+      if (!valid) {
+        var firstBad = enquiryForm.querySelector('.epx-invalid');
+        if (firstBad) { firstBad.focus(); }
+        return;
+      }
+
+      var data = new FormData();
+      data.append('name', name);
+      data.append('mobile', mobile);
+      data.append('email', email);
+      data.append('category', fieldVal('validationDefault08'));
+      data.append('message', message);
+      data.append('website', fieldVal('epxHp')); // honeypot
+
+      sendBtn.classList.add('is-loading');
+      fetch('send-enquiry.php', { method: 'POST', body: data })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          sendBtn.classList.remove('is-loading');
+          if (res.ok) {
+            enquiryForm.reset();
+            clearStatus();
+            if (overlay) { overlay.classList.add('is-visible'); }
+            toast('Enquiry sent! We will get back to you shortly.', true);
+          } else {
+            var msg = res.msg || 'Could not send right now. Please use WhatsApp below.';
+            setStatus(msg, false);
+            toast(msg, false);
+          }
+        })
+        .catch(function () {
+          sendBtn.classList.remove('is-loading');
+          setStatus('Could not send right now. Please use the WhatsApp button below.', false);
+          toast('Could not send right now. Please try the WhatsApp button.', false);
+        });
+    });
+
+    if (modalEl) {
+      modalEl.addEventListener('hidden.bs.modal', function () {
+        if (overlay) { overlay.classList.remove('is-visible'); }
+        clearStatus();
+      });
+    }
+    if (overlay) {
+      overlay.addEventListener('click', function () {
+        overlay.classList.remove('is-visible');
+      });
+    }
+  }
 })();

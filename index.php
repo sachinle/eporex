@@ -644,7 +644,7 @@
                    <h2 class="wow fadeInUp" data-wow-delay=".3s">OUR SERVICES</h2>
                 </div>
                 <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="service-items-2">
                             <div class="service-image">
                                 <img src="assets/img/eporex-products/eporex-ultra-flex-2k.jpeg" alt="EPOREX Ultra Flex 2K — Waterproofing" loading="lazy">
@@ -663,7 +663,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                         <div class="service-items-2">
                             <div class="service-image">
                                 <img src="assets/img/eporex-products/eporex-epoxy-primer.jpeg" alt="EPOREX Epoxy Primer — Industrial Coating" loading="lazy">
@@ -682,7 +682,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
                         <div class="service-items-2">
                             <div class="service-image">
                                 <img src="assets/img/eporex-products/eporex-crystal-clear-resin-and-hardner.jpeg" alt="EPOREX Crystal Clear Resin — Resin Art" loading="lazy">
@@ -701,7 +701,7 @@
                             </div>
                         </div>
                     </div>
-					  <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+					  <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
                         <div class="service-items-2">
                             <div class="service-image">
                                 <img src="assets/img/eporex-products/eporex-epoxy-injection-resin-ej200.jpeg" alt="EPOREX EJ 200 — Industrial Chemicals" loading="lazy">

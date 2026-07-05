@@ -938,14 +938,16 @@ img { max-width: 100%; }
    20. LAYOUT v2 — fresh section compositions (not the template's boxes)
    ========================================================================== */
 
-/* ---- 20a. STATS STRIP — floats over the hero bottom edge ---- */
+/* ---- 20a. STATS STRIP — clean standalone card (no fragile overlap) ---- */
 .Counter-section.section-padding {
-  padding: 0 !important;
+  padding: 16px 0 88px !important;
   background: transparent;
   position: relative;
   z-index: 30;
-  margin-top: -62px;
+  margin-top: 0;
 }
+/* main.css pulls the card up -50px…-5px across breakpoints — neutralise */
+.counter-wrapper .counter-main-items { margin-top: 0 !important; }
 .Counter-section .industril-image { display: none; } /* decorative template art */
 .Counter-section .counter-wrapper .counter-main-items {
   display: flex;
@@ -977,7 +979,7 @@ img { max-width: 100%; }
 }
 .Counter-section .counter-items h2 { margin-bottom: 2px; }
 @media (max-width: 991px) {
-  .Counter-section.section-padding { margin-top: -44px; }
+  .Counter-section.section-padding { margin-top: 0; padding: 8px 0 64px !important; }
   .Counter-section .counter-wrapper .counter-main-items { padding: 26px 22px; }
   .Counter-section .counter-items { flex: 1 1 40%; }
   .Counter-section .counter-items:nth-child(2)::after { display: none; }
@@ -1143,9 +1145,9 @@ img { max-width: 100%; }
     radial-gradient(46% 60% at 8% 88%, rgba(20, 138, 113, .13) 0%, rgba(20, 138, 113, 0) 100%),
     radial-gradient(38% 48% at 28% 14%, rgba(32, 187, 153, .09) 0%, rgba(32, 187, 153, 0) 100%),
     linear-gradient(180deg, #FDFFFE 0%, #F2FAF8 60%, #EAF6F2 100%);
-  padding: 108px 0 148px;
+  padding: 108px 0 96px;
 }
-@media (max-width: 991px) { .epx-banner { padding: 76px 0 118px; } }
+@media (max-width: 991px) { .epx-banner { padding: 76px 0 72px; } }
 
 /* Client banner images (optional) crossfade behind the content */
 .epx-banner__slides { position: absolute; inset: 0; z-index: 0; }
@@ -1301,9 +1303,8 @@ img { max-width: 100%; }
   display: block;
 }
 
-/* Stats strip floats over the banner bottom edge (banner replaces the hero
-   as the section directly above .Counter-section) */
-.epx-banner + .Counter-section { margin-top: -62px; }
+/* Stats strip sits cleanly below the banner */
+.epx-banner + .Counter-section { margin-top: 0; padding-top: 40px !important; }
 
 /* ---- 21e. BUTTON MICRO-INTERACTIONS ---- */
 .theme-btn, .theme-btn-2, .enquire, .btn.btn-primary, .enquiry-actions .btn {
@@ -1608,7 +1609,7 @@ img { max-width: 100%; }
 
 /* ---- 21l. SMALL SCREENS ---- */
 @media (max-width: 575px) {
-  .epx-banner { padding: 60px 0 110px; }
+  .epx-banner { padding: 60px 0 56px; }
   .epx-banner__actions .theme-btn,
   .epx-banner__actions .theme-btn-2 { width: 100%; justify-content: center; text-align: center; }
   .epx-trust-chip { flex: 1 1 100%; }
@@ -2029,3 +2030,118 @@ section.contact-info-area .contact-info-wrapper-2 .contact-info-items .content u
 }
 .epx-sent-overlay h5 { font-size: 20px; }
 .epx-sent-overlay p { font-size: 14.5px; color: var(--ink-2); margin: 0; }
+
+/* ==========================================================================
+   23. MODERN PASS v5 — density + float stacking + inline validation
+   ========================================================================== */
+
+/* ---- 23a. HOME SERVICE CARDS: 4-up density (cards were oversized) ---- */
+.service-section-2.epx-cat-grid .service-items-2 .service-content { padding: 22px 24px 26px; }
+.service-section-2.epx-cat-grid .service-items-2 .service-content h3 { font-size: 19px; margin-bottom: 10px; }
+.service-section-2.epx-cat-grid .service-items-2 .service-content p { font-size: 14.5px; margin-bottom: 16px; }
+.service-section-2.epx-cat-grid .service-items-2 .service-content .theme-btn-2 { padding: 9px 22px; font-size: 14px; }
+.service-section-2.epx-cat-grid .service-items-2 { margin-bottom: 24px; }
+
+/* ---- 23b. STATS CARD BREATHING ROOM ---- */
+.Counter-section .counter-wrapper .counter-main-items { padding: 44px 48px; }
+.Counter-section .counter-items { padding: 4px 0; }
+@media (max-width: 991px) {
+  .Counter-section .counter-wrapper .counter-main-items { padding: 30px 22px; }
+}
+
+/* ---- 23c. FLOATING ELEMENTS STACKING ORDER --------------------------------
+   Desktop: back-to-top bottom-right, WhatsApp to its left.
+   Mobile/tablet: call button (bottom 90) and WhatsApp (bottom 10) stay;
+   back-to-top moves ABOVE the call button so nothing overlaps it.
+   --------------------------------------------------------------------------- */
+div.scroll-up {
+  right: 25px !important;
+  bottom: 25px !important;
+  z-index: 9998 !important;
+}
+@media (max-width: 991px) {
+  div.scroll-up { bottom: 150px !important; right: 22px !important; }
+}
+
+/* ---- 23d. HOME ABOUT IMAGE + EXPERIENCE BADGE (badge text was clipped by
+        the rounded-image overflow) ---- */
+.about-wrapper .about-image { width: 100%; height: auto; }
+.about-wrapper .about-image > img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: cover;
+}
+.about-wrapper .about-image .working-area {
+  left: 20px !important;
+  top: 20px !important;
+  border-radius: var(--r-md);
+  padding: 18px 22px;
+}
+.about-wrapper .about-image .working-area .inner::before { display: none; }
+.about-wrapper .about-image .working-area .inner .icon-box i { font-size: 34px; margin-bottom: 8px; }
+.about-wrapper .about-image .working-area .inner .icon-box h3 { font-size: 22px; color: #fff !important; }
+.about-wrapper .about-image .working-area .inner .icon-box p { white-space: nowrap; font-size: 13px; }
+
+/* ---- 23e. INLINE FORM VALIDATION + TOAST ---- */
+.form-control.epx-invalid {
+  border-color: #D64545 !important;
+  background: #FFF9F9 !important;
+  box-shadow: 0 0 0 4px rgba(214, 69, 69, .10) !important;
+}
+.epx-field-err {
+  display: block;
+  color: #B4232C;
+  font-size: 12.5px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+.epx-toast {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translate(-50%, -18px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--ink);
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 14.5px;
+  padding: 14px 22px;
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-lg);
+  z-index: 100002;
+  opacity: 0;
+  transition: opacity .35s var(--ease), transform .35s var(--ease);
+  max-width: min(92vw, 560px);
+}
+.epx-toast.is-in { opacity: 1; transform: translate(-50%, 0); }
+.epx-toast i { font-size: 17px; flex: 0 0 auto; }
+.epx-toast.is-ok i { color: var(--brand); }
+.epx-toast.is-err i { color: #FF7A7A; }
+
+/* ---- 23f. HARD-LOCK SQUARE MEDIA FRAMES -----------------------------------
+   aspect-ratio alone can be stretched by a portrait image's intrinsic
+   min-content height. Absolutely filling the frame makes every media box
+   exactly the same size regardless of the photo inside.
+   --------------------------------------------------------------------------- */
+.products-grid .product-card__media,
+.service-section-2:not(.home-services) .service-items-2 .service-image,
+.gallery-wrapper .gallery-image-2.epx-shot {
+  position: relative;
+  overflow: hidden;
+}
+.products-grid .product-card__media > img,
+.service-section-2:not(.home-services) .service-items-2 .service-image > img,
+.gallery-wrapper .gallery-image-2.epx-shot > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100% !important;
+}
+.service-section-2:not(.home-services) .service-items-2 .service-image > .epx-media-pending {
+  position: absolute;
+  inset: 0;
+}
