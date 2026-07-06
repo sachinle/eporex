@@ -69,21 +69,17 @@
 
         
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="preload" as="style" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></noscript>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+        <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" onload="this.onload=null;this.rel='stylesheet'">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+        <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" onload="this.onload=null;this.rel='stylesheet'">
 
 		
 
 		<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
 
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-		<!------ Include the above in your HEAD tag ---------->
+<!------ Include the above in your HEAD tag ---------->
 
 
         <!--<< Google Fonts: Manrope + Inter >>-->
@@ -91,5 +87,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
         <!--<< EPOREX Premium Light Theme Redesign (loaded last) >>-->
-        <link rel="stylesheet" href="assets/css/eporex-redesign.css?v=5">
+        <link rel="stylesheet" href="assets/css/eporex-redesign.css?v=6">
+        <link rel="preload" as="image" href="assets/img/w2.jpg" fetchpriority="high">
     </head>

@@ -21,12 +21,24 @@
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
         
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script> 
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <!-- jQuery 1.12 kept solely for the legacy Owl intro slider (Owl 1.3 needs jQuery <3). -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+		<script>
+		/* Owl intro slider init (relocated out of prod_slide.php). */
+		(function ($) {
+			if (!$ || !$.fn || !$.fn.owlCarousel) { return; }
+			$(function () {
+				$("#news-slider14").owlCarousel({
+					items: 1, itemsDesktop: [1199, 1], itemsDesktopSmall: [980, 1],
+					itemsMobile: [550, 1], pagination: false, autoPlay: true
+				});
+			});
+		})(window.jQuery);
+		</script>
 
 		<!--<< EPOREX modern interaction layer >>-->
-		<script src="assets/js/eporex-modern.js?v=5" defer></script>
+		<script src="assets/js/eporex-modern.js?v=6" defer></script>
 
 		<!--<< EPOREX subtle scroll-reveal (progressive enhancement) >>-->
 		<script>

@@ -378,7 +378,7 @@ td, th {
                                 <div class="widget-head">
                                     <h4>In Google</h4>
                                 </div>
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.122877073274!2d78.1653719!3d11.2523702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babcf9051bcee57%3A0xa080b0363ccea7c9!2sEPOREX!5e0!3m2!1sen!2sin!4v1711014784099!5m2!1sen!2sin" width="100%" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								<iframe class="epx-lazy-map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.122877073274!2d78.1653719!3d11.2523702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babcf9051bcee57%3A0xa080b0363ccea7c9!2sEPOREX!5e0!3m2!1sen!2sin!4v1711014784099!5m2!1sen!2sin" width="100%" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 <!--<div class="footer-content">
                                     <p>
                                         Sing Up For News & Get 30% Off <br>
@@ -400,7 +400,7 @@ td, th {
                 <div class="container">
                     <div class="footer-bottom-wrapper">
                         <p>
-                            © All Copyright 2024 by <a href="index.php">Eporex</a>
+                            © All Copyright 2026 by <a href="index.php">Eporex</a>
                         </p>
                        <!--   <ul>
                             <li><a href="contact.html">Terms & Condition</a></li>
@@ -593,21 +593,11 @@ function mailUs() {
               "&body=" + encodeURIComponent(body);
     window.location.href = url;
 }
-$(function() {
-    $("input[name='numonly']").on('input', function(e) {
-        $(this).val($(this).val().replace(/[^0-9]/g, ''));
-    });
-});
 
-SIZE = 10
-$(document).ready(function() {
-      $("#youridher").bind('keyup', function() { 
-            if($("#youridher").val().length <= SIZE && PHONE_REGEX) {
-                return true;
-            }
-            else {
-                return false;
-            }  
-      });
+/* Numeric-only inputs — vanilla, no jQuery needed (runs at parse). */
+document.addEventListener('input', function (e) {
+    if (e.target && e.target.matches("input[name='numonly']")) {
+        e.target.value = e.target.value.replace(/[^0-9]/g, '');
+    }
 });
 </script>

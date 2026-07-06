@@ -356,4 +356,30 @@
       });
     }
   }
+
+  /* ------------------------------------------------------------------
+     N. Lazy-load the Google Maps embed only when the footer is near.
+     Keeps ~0.5MB of third-party map JS/tiles off the initial load.
+     ------------------------------------------------------------------ */
+  (function () {
+    var maps = document.querySelectorAll('iframe.epx-lazy-map[data-src]');
+    if (!maps.length) { return; }
+    function load(m) {
+      if (m.dataset.src) { m.src = m.dataset.src; m.removeAttribute('data-src'); }
+    }
+    if (!('IntersectionObserver' in window)) {
+      // Fallback: load on first user interaction.
+      window.addEventListener('scroll', function once() {
+        maps.forEach(load);
+        window.removeEventListener('scroll', once);
+      }, { passive: true });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { load(e.target); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '400px 0px' });
+    maps.forEach(function (m) { io.observe(m); });
+  })();
 })();

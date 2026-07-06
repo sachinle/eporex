@@ -78,9 +78,10 @@
 
         <link rel="stylesheet" href="assets/css/animate.css">
 
-        <!--<< Magnific Popup.css >>-->
+        <!--<< Magnific Popup.css (async — only used by lightbox/video popups) >>-->
 
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="preload" as="style" href="assets/css/magnific-popup.css" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="assets/css/magnific-popup.css"></noscript>
 
         <!--<< MeanMenu.css >>-->
 
@@ -90,9 +91,10 @@
 
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-        <!--<< Nice Select.css >>-->
+        <!--<< Nice Select.css (async — only used by form selects) >>-->
 
-        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="preload" as="style" href="assets/css/nice-select.css" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="assets/css/nice-select.css"></noscript>
 
         <!--<< Main.css >>-->
 
@@ -108,26 +110,26 @@
 
         <!--<< EPOREX Premium Light Theme Redesign (loaded last) >>-->
 
-        <link rel="stylesheet" href="assets/css/eporex-redesign.css?v=5">
+        <link rel="stylesheet" href="assets/css/eporex-redesign.css?v=6">
 
 
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <!-- Font Awesome 4 + Owl Carousel CSS: async (non-critical, third-party) -->
+        <link rel="preload" as="style" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+        </noscript>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+        <!-- Preload the LCP hero slide (mobile & desktop variants) -->
+        <link rel="preload" as="image" href="assets/img/slider/ms1.jpg" media="(max-width: 991px)" fetchpriority="high">
+        <link rel="preload" as="image" href="assets/img/slider/s1.jpg" media="(min-width: 992px)" fetchpriority="high">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-
-		
-
-		<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
-
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-		<!------ Include the above in your HEAD tag ---------->
-
-
+        <!-- NOTE: jQuery & Bootstrap JS load once, deferred, before </body>
+             (see mainbot.php). They are intentionally NOT in <head> to avoid
+             render-blocking. -->
 
     </head>

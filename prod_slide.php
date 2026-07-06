@@ -300,26 +300,4 @@
 
     </div>
 
-<script>
-
-$(document).ready(function() {
-
-  $("#news-slider14").owlCarousel({
-
-        items : 1,
-
-        itemsDesktop:[1199,1],
-
-        itemsDesktopSmall:[980,1],
-
-        itemsMobile : [550,1],
-
-        pagination:false,
-
-        autoPlay:true
-
-    });
-
-});
-
-</script>
+<!-- Owl init moved to mainbot.php (runs after jQuery + Owl load; no head jQuery needed) -->
