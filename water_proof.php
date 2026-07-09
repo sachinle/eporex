@@ -35,7 +35,7 @@
                         <p>Sealants, injection grouts, crack fillers and protective coatings for homes, industries and infrastructure — engineered to stop leaks at the source and supplied for both project and retail requirements.</p>
                     </div>
                     <div class="epx-cat-intro__meta">
-                        <span class="epx-count-chip"><i class="fa-solid fa-boxes-stacked"></i> 16 Products</span>
+                        <span class="epx-count-chip"><i class="fa-solid fa-boxes-stacked"></i> 13 Products</span>
                         <a href="#" class="theme-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Bulk Quote</a>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <!-- <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="service-items-2">
                             <div class="service-image">
                                 <div class="epx-media-pending">
@@ -99,7 +99,7 @@
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry Now</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="service-items-2">
                             <div class="service-image">
@@ -124,7 +124,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <!-- <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="service-items-2">
                             <div class="service-image">
                                 <div class="epx-media-pending">
@@ -138,7 +138,7 @@
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry Now</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="service-items-2">
                             <div class="service-image">
@@ -175,7 +175,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <!-- <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="service-items-2">
                             <div class="service-image">
                                 <div class="epx-media-pending">
@@ -189,7 +189,7 @@
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry Now</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="service-items-2">
                             <div class="service-image">

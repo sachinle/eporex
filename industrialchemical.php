@@ -46,7 +46,7 @@
         <section class="service-section-2 epx-product-grid fix section-padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    <!-- <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="service-items-2">
                             <div class="service-image">
                                 <div class="epx-media-pending">
@@ -60,8 +60,8 @@
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry Now</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    </div> -->
+                    <!-- <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="service-items-2">
                             <div class="service-image">
                                 <div class="epx-media-pending">
@@ -75,8 +75,8 @@
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry Now</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                    </div> -->
+                    <!-- <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="service-items-2">
                             <div class="service-image">
                                 <div class="epx-media-pending">
@@ -90,7 +90,7 @@
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Enquiry Now</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="service-items-2">
                             <div class="service-image">
